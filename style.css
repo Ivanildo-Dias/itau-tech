@@ -1,11 +1,13 @@
 body{
     margin: 0%;
 }
+
 /*Imagem do topo*/
 .imagem-topo {
     background-image: url(imagens/capa.jpg);
     height: 600px;
 }
+
 #texto {
     position: absolute;
     font-family: 'Roboto', sans-serif;
@@ -14,23 +16,26 @@ body{
     left: 120px;
     top: 135px;
 }
-label{
+
+label {
     background: #e76d024f;
     height: 50px;
     width: 400px;
     text-align: center;
 }
+
 /*Menu do site*/
 .menu{
     background-color: #E8721A;
     list-style-type: none;
     padding-left: 5%;
     padding-right: 5%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     top: 0;
     overflow: hidden;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 2;
 }
 
 #menuLink {
@@ -73,9 +78,122 @@ label{
     margin-right: 5%;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    font-weight: 500px;
 }
 
-/*Página: Sobre*/
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 700px;
+    color: #E8721A;
+}
+
+/*Home*/
+#tituloPrincipal{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 900px;
+    color: #E8721A;
+    margin-bottom: -30px;
+}
+
+#video-01{
+    float: left;
+    margin-right: 15px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+}
+
+#textoPrincipal{
+    margin-top: 60px;
+    text-align: justify;
+}
+
+#tituloNoticia-secundaria{
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 900px;
+    color: #003D9B;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+#noticiaSecundaria{
+    display: flex;
+}
+
+#noticia-secundaria img{
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#noticia-secundaria a{
+    text-decoration: none;
+}
+
+#noticia-secundaria a:hover{
+    text-decoration: underline;
+    color: #003D9B;
+}
+
+#tituloSecundario{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400px;
+    margin-right: 40px;
+}
+
+#tituloMais-noticias{
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 900px;
+    color: #003D9B;
+    margin-top: 60px;
+    margin-bottom: 10px;    
+}
+
+#capaNoticia-mais{
+    width: 200px;
+    height: 140px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 30px;
+}
+
+#tituloMais{
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 700px;
+    color: #E8721A;  
+}
+
+input{
+    color: #003D9B;
+    background: white;
+    border-color: #E8721A;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+input:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+audio{
+    margin-left: 830px;
+    margin-top: -100px;
+    color: turquoise;
+}
+
+/*Sobre*/
 #capaPerfil{
     width: 120px;
     height: 120px;
