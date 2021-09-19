@@ -13,7 +13,8 @@
 <body>
     <!--Imagem topo-->
     <div class="imagem-topo">
-        <label id="texto">Começamos a virar o jogo! <b style="color: #003e9b8f;">Cuide-se</b></label>
+        <label id="texto">Começamos a virar o jogo! <b style="color: #003e9b8f;">Cuide-se<br><img src="imagens/logo.png" id="logo-capa"></b></label>
+        <img src="imagens/seta.gif" id="seta-baixo">
     </div>
     <!--Menu-->
     <div class="menu">
@@ -40,75 +41,126 @@
             </div>
         </div>
         <h2 id="tituloNoticia-secundaria">Principais notícias do dia:</h2>
+        <hr>
         <div id="noticiaSecundaria">
             <div id="noticia-secundaria">
-                <img src="imagens/capa-01.jpg" id="capaNoticia-segundaria">
+                <a href="noticia-02.html"><img src="imagens/capa-01.jpg" id="capaNoticia-segundaria01"></a>
                 <a href="noticia-02.html"><h1 id="tituloSecundario">Profissionais de saúde comemoram UTIs para Covid-19 vazias de hospital no RN: ‘Viva a vacina’</h1></a>
             </div>
             <div id="noticia-secundaria">
-                <img src="imagens/capa-01.jpg" id="capaNoticia-segundaria">
-                <a href="noticia-02.html"><h1 id="tituloSecundario">Profissionais de saúde comemoram UTIs para Covid-19 vazias de hospital no RN: ‘Viva a vacina’</h1></a>
+                <a href="noticia-03.html"><img src="imagens/capa-02.jpg" id="capaNoticia-segundaria02">
+                <a href="noticia-03.html"><h1 id="tituloSecundario">Brasil é 5º país que mais aplicou doses entre países do G20; veja atualização</h1></a>
             </div> 
             <div id="noticia-secundaria">
-                <img src="imagens/capa-01.jpg" id="capaNoticia-segundaria">
-                <a href="noticia-02.html"><h1 id="tituloSecundario">Profissionais de saúde comemoram UTIs para Covid-19 vazias de hospital no RN: ‘Viva a vacina’</h1></a>
+                <a href="noticia-04.html"><img src="imagens/capa-03.jpg" id="capaNoticia-segundaria03"></a>
+                <a href="noticia-04.html"><h1 id="tituloSecundario">100 empresas que fizeram as maiores doações no Brasil</h1></a>
             </div>
         </div>
         <h2 id="tituloMais-noticias">Mais notícias:</h2>
         <hr>
         <div id="noticiaMais">
-            <img src="imagens/capa-01.jpg" id="capaNoticia-mais">
+            <iframe width="699" height="393" src="https://www.youtube.com/embed/YEpOBrgHlHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="capaNoticia-mais"></iframe>
             <div id="textoMais">
-                <h1 id="tituloMais">Com avanço da vacinação, mortes por Covid no Brasil caem 77% desde junho</h1>
-                <p>No dia 13 de junho, o Brasil registrou 1.999 mortes na média móvel de sete dias. Nesta segunda-feira (13), a média móvel ficou em 465 óbitos.</p>
-                <a href="">
-                    <input type="button" value="Continar lendo">
-                </a>
+                <h1 id="tituloMais">Veja casos de idosos e doentes crônicos que se recuperaram da covid-19</h1>
+                <p>No estado do Rio de Janeiro, o total de casos de Covid-19 está em 77.784, 7.417 mortos e 61.690 recuperados. Na capital, muito movimento no calçadão da praia no feriado prolongado, além de muitas pessoas sem máscara nas ruas.</p>
+                <input type="button" value="Assistir" id="botaoMidia">
+                <a href="https://youtu.be/YEpOBrgHlHI" target="_blanck"><input type="button" value="Fonte oficial" id="oficial"></a>
+            </div>
+            <div id="modalNoticia" class="modal">      
+                <div class="modal-container">
+                    <span id="fecharMidia">&times;</span>
+                        <video id="midiaNoticia" width="100%" controls>
+                            <source src="imagens/video-04.mp4" type="video/mp4">
+                            Pedimos desculpas mas o vídeo não é suportado pelo seu navegador, se possível pedimos que tente acessar em outro navegador.
+                        </video>
+                </div>
             </div>
         </div>
         <hr>
         <div id="noticiaMais">
-            <img src="imagens/capa-06.jpg" id="capaNoticia-mais">
+            <a href="noticia-05.html"><img src="imagens/capa-05.jpg" id="capaNoticia-mais"></a>
             <div id="textoMais">
-                <h1 id="tituloMais">Podcast "Home Office durante pandemia": o futuro do trabalho será em casa?</h1>
-                <p>Neste episódio do Entre Tech, especialistas falam sobre benefícios e dicas para home office, além de discutir sobre o futuro do trabalho.</a></p>
-                <a href="noticia-06.html">
-                    <input type="button" value="Continar lendo">
-                </a>
+                <h1 id="tituloMais">Fiocruz registra queda na mortalidade por covid-19 no Brasil</h1>
+                <p>Diante do avanço da vacinação, pesquisadores da Fiocruz registraram queda no índice de mortalidade por covid-19, no Brasil. O boletim epidemiológico que vai até o fim de julho mostra uma redução em...</a></p>
+                <a href="noticia-05.html"><input type="button" value="Continar lendo"></a>
             </div>
         </div> 
         <audio controls>
-            <source src="imagens/Audio-01.mp3" type="audio/mp3">
+            <source src="imagens/audio-01.mp3" type="audio/mp3">
             Pedimos desculpas mas o áudio não é suportado pelo seu navegador, se possível pedimos que tente acessar em outro navegador.
         </audio>
         <hr>
+        <script>
+            var botao = document.getElementById("botaoMidia");
+            var modal = document.getElementById("modalNoticia");
+            var fechar = document.getElementById("fecharMidia");
+            var midia = document.getElementById("midiaNoticia");
+            botao.onclick = function() {
+                modal.style.display = "block";
+                midia.play(); 
+            }
+            fechar.onclick = function() {
+                modal.style.display = "none";
+                midia.pause();
+            }            
+            window.onclick = function(event) {
+                if (event.target == modal) {                
+                modal.style.display = "none";
+                midia.pause();
+            }}
+        </script>
+        </div>
     </div>
     <!--Rodapé-->
     <footer>
-        <img src="Imagens/logo.png" id="logo-rodape">
-        <div>Projeto - Itaú Tech 2021 - 04ª Edição (Grupo 23)</div>
-            <div class="redes-sociais">
-                <div id="social">
-                    <a href="https://br.linkedin.com/in/ivanildo-dias-rocha-10081443" target="_blank"><img src="Imagens/linkdin.png" id="linkedin"></a>
-                    <p id="nome">Ivanildo Dias</p>
-                </div>
-                <div id="social">
-                    <a href="https://www.linkedin.com/in/haroldo-m-rodrigues-3823aab8" target="_blank"><img src="Imagens/linkdin.png" id="linkedin"></a>
-                    <p id="nome"p>Haroldo Mendes</p>
-                </div>
-                <div id="social">
-                    <a href="https://www.linkedin.com/in/flavia-jesus-26464839" target="_blank"><img src="Imagens/linkdin.png" id="linkedin"></a>
-                    <p id="nome">Flavia Jesus</p>
-                </div>
-                <div id="social">
-                    <a href="https://br.linkedin.com/in/ivanildo-dias-rocha-10081443" target="_blank"><img src="Imagens/linkdin.png" id="linkedin"></a>
-                    <p id="nome">Ciro Franco</p>
-                </div>
-                <div id="social">
-                    <a href="https://br.linkedin.com/in/ivanildo-dias-rocha-10081443" target="_blank"><img src="Imagens/linkdin.png" id="linkedin"></a>
-                    <p id="nome">Marcos Ramos</p>
+        <div class="rodape">
+            <div id="equipe">
+                <h3>Equipe:</h3>
+                <a href="sobre.html#ivanildo"><p>Ivanildo Dias Rocha</p></a>
+                <a href="sobre.html#flavia"><p>Flavia Rosa de Jesus</p></a>
+                <a href="sobre.html#ciro"><p>Ciro Franco</p></a>
+                <a href="sobre.html#haroldo"><p>Haroldo Mendes Rodrigues</p></a>
+                <a href="sobre.html#marcos"><p>Marcos Ramos dos Santos</p></a>
+            </div>
+            <div id="paginas">
+                <h3>Páginas:</h3>
+                <a href="index.html"><p>Home</p></a>
+                <a href="sobre.html"><p>Sobre</p></a>
+                <a href="contato.html"><p>Contato</p></a>
+                <a href="saiba-mais.html"><p>Saiba mais</p></a>
+            </div>
+            <div id="apoiadores">
+                <h3>Apoiadores:</h3>
+                <a href="https://www.itau.com.br/" target="_blank"><p>Itaú-Unibanco</p></a>
+                <a href="https://www.gama.academy/?utm_source=google&utm_medium=compramidia&utm_campaign=institucional-brand&gclid=Cj0KCQjwnJaKBhDgARIsAHmvz6dQwkgczur2YTOzf7NcU03TIj0Lre24vQtDmJZ8RHhAiu9Qcqh2h6waApkjEALw_wcB" target="_blank"><p>Gama Academy</p></a>
+            </div>
+            <div id="logoSite">
+                <a href="index.html"><img src="Imagens/logo.png" id="logo-rodape"></a>
+                <div class="redes-sociais">
+                    <div id="social">
+                        <a href="https://github.com/Ivanildo-Dias" target="_blank"><img src="Imagens/gitHub.png" id="gitHub"></a>
+                        <p id="nome">Ivanildo</p>
+                    </div>
+                    <div id="social">
+                        <a href="https://github.com/flaveeenha" target="_blank"><img src="Imagens/gitHub.png" id="gitHub"></a>
+                        <p id="nome"p>Flavia</p>
+                    </div>
+                    <div id="social">
+                        <a href="https://github.com/Ciro-Franco" target="_blank"><img src="Imagens/gitHub.png" id="gitHub"></a>
+                        <p id="nome">Ciro</p>
+                    </div>
+                    <div id="social">
+                        <a href="https://github.com/Haroldomrod" target="_blank"><img src="Imagens/gitHub.png" id="gitHub"></a>
+                        <p id="nome">Haroldo</p>
+                    </div>
+                    <div id="social">
+                        <a href="https://github.com/Marcosrates" target="_blank"><img src="Imagens/gitHub.png" id="gitHub"></a>
+                        <p id="nome">Marcos</p>
+                    </div>
                 </div>
             </div>
+            </div>
+            <div id="descricaoProjeto">Projeto - Itaú Tech 2021 - 04ª Edição (Grupo 23)</div>
         </div>
     </footer>    
 </body>

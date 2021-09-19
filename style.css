@@ -13,8 +13,21 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     color: white;
-    left: 120px;
-    top: 135px;
+    left: 100px;
+    top: 50px;
+}
+
+#logo-capa{
+    height: 140px;
+    margin-top: 15px;
+}
+
+#seta-baixo{
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    top: 92%;
+    left: 50%;
 }
 
 label {
@@ -27,7 +40,6 @@ label {
 /*Menu do site*/
 .menu{
     background-color: #E8721A;
-    list-style-type: none;
     padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 50px;
@@ -88,6 +100,36 @@ h1{
     color: #E8721A;
 }
 
+#rodapeNoticia{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    font-size: 16px;
+    color: #003D9B;
+    background: white;
+    border-color: #E8721A;
+    border-radius: 30px;
+    width: 140px;
+    height: 35px;
+    margin-top: 60px;
+    margin-right: 90px;
+    transition: all 0.5s;
+    cursor: pointer;    
+}
+
+hr{
+    height: 1px;
+    background-color: #E8721A;
+    border: none;
+}
+
+button:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);    
+}
+
 /*Home*/
 #tituloPrincipal{
     font-family: 'Roboto', sans-serif;
@@ -115,11 +157,15 @@ h1{
     font-weight: 900px;
     color: #003D9B;
     margin-top: 120px;
-    margin-bottom: 40px;
 }
 
 #noticiaSecundaria{
     display: flex;
+    justify-content: space-between;
+}
+
+#noticia-secundaria{
+    width: 350px;
 }
 
 #noticia-secundaria img{
@@ -141,7 +187,8 @@ h1{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400px;
-    margin-right: 40px;
+    text-align: justify;
+    margin-top: 10px;
 }
 
 #tituloMais-noticias{
@@ -173,13 +220,18 @@ input{
     background: white;
     border-color: #E8721A;
     border-radius: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 110px;
+    height: 28px;
     margin-bottom: 20px;
+    margin-right: 30px;
     transition: all 0.5s;
     cursor: pointer;
+}
+
+#oficial{
+    color: #E8721A;
+    background: white;
+    border-color: #003D9B;
 }
 
 input:hover{
@@ -188,9 +240,175 @@ input:hover{
 }
 
 audio{
-    margin-left: 830px;
+    width: 60%;
+    margin-left: 450px;
     margin-top: -100px;
-    color: turquoise;
+}
+
+#textoSecundario02 img{
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fonte{
+    font-size: 12px;
+    color: rgb(36, 35, 35);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*Modal*/
+.modal {
+    background-color: rgb(0,0,0,0.9);
+    display: none; 
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    left: 0;
+    top: 0;
+    overflow: auto;       
+    z-index: 3;
+}
+
+.modal-container {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 75%;
+    box-shadow: 0 6px 108px 0 rgba(0,0,0,0.5),0 6px 20px 0 rgba(0,0,0,0.25);
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s
+}
+
+.modal-body {
+    padding: 2px 18px;
+}
+
+/* Botão Fechar */
+#fecharMidia {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#fecharMidia:hover,
+#fecharMidia:focus {
+    color: #E8721A;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Noticia 01*/
+#tituloNoticia01{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 900px;
+    color: #E8721A;
+}
+
+/*Noticia 02*/
+#tituloNoticia02{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 900px;
+    color: #E8721A;
+}
+
+.noticia02 img{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.noticia02 video{
+    width: 300px;
+}
+
+#imagemNoticia02{
+    width: 80%;
+}
+
+.noticia02{
+    text-align: center;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+/*Noticia 03*/
+#tituloNoticia03{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 900px;
+    color: #E8721A;
+}
+
+.noticia03 img{
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.noticia03 video{
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.noticia03{
+    text-align: center;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+/*Noticia 04*/
+#tituloNoticia04{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 900px;
+    color: #E8721A;
+    margin-bottom: -30px;
+}
+
+.noticia04 img{
+    width: 100%;
+    margin-top: 60px;
+}
+
+.noticia04{
+    text-align: justify;
+}
+
+.empresas p{
+    margin: 2%;
+}
+
+#empresa{
+    color: #E8721A;
+}
+
+/*Noticia 05*/
+#tituloNoticia05{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 900px;
+    color: #E8721A;
+}
+
+.noticia05{
+    text-align: justify;
 }
 
 /*Sobre*/
@@ -198,6 +416,8 @@ audio{
     width: 120px;
     height: 120px;
     border-radius: 90px;
+    border: 5px solid white;
+    box-shadow: 2px 2px 4px 2px rgb(182, 181, 181, 0.4);
     float: left;
 }
 
@@ -208,6 +428,8 @@ audio{
 
 #introducaoPerfil H2{
     font-size: 22px;
+    font-weight: 800;
+    color: #003D9B;
 }
 
 #Descricao H1{
@@ -239,56 +461,151 @@ audio{
     justify-content: left;
 }
 
+#perfil1{
+    height: 840px;
+}
+
+#perfil2{
+    height: 880px;
+}
+
+#perfil3{
+    height: 680px;
+}
+
+/*Contato*/
+#container-contato{
+    display: flex;
+    justify-content: left;
+}
+
+#animacaoFormulario{
+    height: 100%;
+}
+
+/*Saiba mais*/
+#fonteOficial{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 0.5;
+}
+
 /*Rodapé do site*/
-footer{
-    background-color: #E8721A;
-    margin-top: 150px;
-    padding-bottom: 15px;
-    padding-left: 5%;
-    padding-right: 5%;
+.rodape{
+    margin-top: 100px;
+    padding-left: 7%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    height: 160px;
+    background: #E8721A;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.6;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    display: block;
+    font-weight: 570;
+    color: rgb(215, 215, 215);
+    text-align: left;
+}
+
+.rodape a{
+    text-decoration: none;
+    line-height: 0.6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 570;
+    color: rgb(215, 215, 215);
+    text-align: left;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.rodape a:hover{
+    font-size: 19px;
+    font-weight: 700;
     color: white;
-    text-align: center;
+}
+
+.rodape h3{
+    font-weight: 900;
+    padding-bottom: 10px;
+    color: white
+}
+
+#paginas{
+    width: 150px;
+}
+
+#equipe{
+    width: 260px;
+}
+
+#apoiadores{
+    width: 150px;
+}
+
+#logoSite{
+    width: 550px;
+    text-align: center; 
 }
 
 #logo-rodape{
-    height: 120px;
+    height: 70px;
     border-radius: 20px;
-    margin-top: 15px;
+    margin-bottom: 3px;
 }
 
 #linkedin{
     width: 60px;
-    height: 60px;
-    margin-top: 10px;
     border-radius: 5px;
     transition: all 0.5s;
     cursor: pointer;
 }
 
 #linkedin:hover{
-    -webkit-transform: scale(1.5);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+#gitHub{
+    width: 60px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#gitHub:hover{
+    -webkit-transform: scale(1.3);
     transform: scale(1.3);
 }
 
 .redes-sociais{
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
 #social{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #nome{
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    color: #FFF212;
-    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(215, 215, 215);
+    margin-top: 10px;
 }
 
+#descricaoProjeto{
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 570;
+    color: rgb(215, 215, 215);
+    text-align: center;
+    background: #ce681b;
+    padding-top: 20px;
+    border-top: 1px solid white;
+}
 
