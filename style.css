@@ -1,7 +1,10 @@
 body{
     margin: 0%;
     width: 100%;
+    height: 100%;
 }
+
+
 
 /*Imagem do topo*/
 .imagem-topo {
@@ -609,5 +612,68 @@ audio{
     background: #ce681b;
     padding-top: 20px;
     border-top: 1px solid white;
+}
+
+/*Pop-up*/
+.Pop-upModal-container{
+    width: 100vw;
+    height: 50vw;
+    background: rgb(29, 29, 29, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+#Pop-up h3{
+    height: 250px;
+    width: 460px;
+    background: white;
+    text-align: center;
+    padding: 2vw;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500px;
+    color: #003D9B;
+}
+
+#Pop-up strong{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 900px;
+    color: #E8721A;
+}
+
+#Pop-up img{
+    width: 40%;
+}
+
+#Pop-up{
+    position: relative;
+}
+
+#fecharPop-up{
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    background: rgb(255, 255, 255, 0);
+    border: 0px;
+    bottom: 340px;
+    left: 500px;
+    position: absolute;
+    z-index: 7;
+}
+
+#fecharPop-up:hover{
+    color: #E8721A;
+    text-decoration: none;
+    cursor: pointer;
 }
 

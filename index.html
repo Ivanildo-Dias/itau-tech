@@ -108,6 +108,9 @@
                 modal.style.display = "none";
                 midia.pause();
             }}
+            function ocultar() {
+            document.getElementById("Pop-upModal").style.display = "none";
+        }
         </script>
         </div>
     </div>
@@ -162,6 +165,11 @@
             </div>
             <div id="descricaoProjeto">Projeto - Itaú Tech 2021 - 04ª Edição (Grupo 23)</div>
         </div>
-    </footer>    
+    </footer>
+    <div id="Pop-upModal" class="Pop-upModal-container">
+        <div id="Pop-up">
+            <a href="#" onClick="ocultar()"><button id="fecharPop-up">X</button></a>
+            <h3>Para uma melhor experiência recomendamos<br>a resolução de tela de: <br><img src="imagens/pc.png"><br><strong>1280 x 720</strong></h3>
+        </div>  
 </body>
 </html>
